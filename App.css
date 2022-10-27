@@ -12,21 +12,45 @@ body {
   height: 300px;
   top: 20%;
   left:27.5%;
-  
-  
-
   perspective: 1000px;
+}
+
+.sDeck {
+  height: 29px;
+  width: 80px;
+  top: 40px;
+  font-size: 15px;
+  position: relative;
+  font-family: Helvetica;
+}
+
+#deckTitle {
+  font-size: 50px;
 }
 
 .card {
   position: relative;
   width: 250%;
+  left: -68.7%;
+  top: -40.1%;
   height: 200%;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   
+}
+.home {
+  background-color: white;
+  visibility: visible;
+  border-radius: 8px;
+  color: black;
+  position: relative;
+  top:150px;
+  left: 590px;
+  width: 750px;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 #front, #back {
@@ -64,7 +88,7 @@ body {
 
 .buttons {
   position: relative;
-  top:93%;
+  top:91%;
 
 }
 .divider{
@@ -82,7 +106,7 @@ body {
   
 }
 .showAnswer {
-  top: 470px;
+  top: 460px;
   position: relative;
   font-size: 20px;
   height: 40px;
