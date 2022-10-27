@@ -1,0 +1,12 @@
+{
+    "Cards": [
+        {"Word": "Hola"},
+        {"Tran": "Hello"},
+        {"Word": "Si"},
+        {"Tran": "Yes"},
+        {"Word": "ir"},
+        {"Tran": "to go"},
+        {"Word": "estar"},
+        {"Tran": "to be (temporary)"}
+    ]
+}
