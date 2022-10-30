@@ -40,9 +40,19 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   
 }
+.cardDone {
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  position: relative;
+  top:250px;
+  left: 590px;
+  width: 750px;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
 .home {
   background-color: white;
-  visibility: visible;
   border-radius: 8px;
   color: black;
   position: relative;
