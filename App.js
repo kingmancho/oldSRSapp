@@ -9,6 +9,7 @@ export default function App() {
   //get data object
   var getData = localStorage.getItem("data");
   var data = JSON.parse(getData);
+  var cardsNum = getData.length;
 
   var i1 = 0;
   function flipCard() {
@@ -26,6 +27,12 @@ export default function App() {
   }
 
   function onResponse() {
+    if (i1 == cardsNum - 1) {
+        alert ("eij");
+        //document.getElementById("cardDone").style.visibility = "visible";
+        //document.getElementsByClassName("a").style.visibility = "hidden";
+
+    }
     flipCard();
     i1 += 2;
     document.getElementById("front").innerHTML = JSON.stringify(
@@ -33,31 +40,43 @@ export default function App() {
     );
   }
 
-  window.onload = function () {
-    document.getElementById("a").style.visibility = "hidden"
+  function goCards() {
+    
+    document.getElementById("home").style.visibility = "hidden";
+    document.getElementById("a").style.visibility = "visible";
 
     document.getElementById("front").innerHTML = JSON.stringify(
       data.Cards[0].Word
     );
- 
+  }
+
+  window.onload = function () {
+    document.getElementById("a").style.visibility = "hidden";
+    document.getElementById("cardDone").style.visibility = "hidden";
+    alert(cardsNum);
   };
 
   //JSON.stringify(data.Cards[0].card1[0].Word)
 
   /*
     function getCard() {
-        for (var i1 = 0; i1 < 0; i1++) {
+        for (var i1 = 0; i1 <div 0; i1++) {
         data.cards[card1[JSON.stringify(data).substring(6,7)].Word];
     }
     
     */
 
   return (
-    <div id = "home" class = "home">
-      <div id = "deckTitle">Decks</div>
-      <button class = "sDeck">Spanish</button>
-      <div id = "a" class="scene scene--card">
-        <div class="card a">
+    <div>
+        <div id="home" class="home">
+            <div id="deckTitle">Decks</div>
+            <button onClick={goCards} class="sDeck">
+            Spanish
+            </button>
+        </div>
+
+        <div id="a" class="scene scene--card">
+        <div class="card ">
           <div class="card__face card__face--front">
             <div id="front"></div>
             <button onClick={onFlip} id="showAnswer" class="showAnswer">
@@ -67,7 +86,7 @@ export default function App() {
 
           <div class="card__face card__face--back">
             <div id="back"></div>
-            <div class="buttons a">
+            <div class="buttons">
               <button onClick={onResponse} class="button">
                 1
               </button>
@@ -90,7 +109,7 @@ export default function App() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </div>
   );
 }
